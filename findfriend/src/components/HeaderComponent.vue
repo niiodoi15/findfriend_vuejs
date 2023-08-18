@@ -43,7 +43,7 @@
 
         <div class="herocards">
             <!-- require('../assets/twitter.png') -->
-            <HeroCardComponent cardimages="../assets/twitter.png"  cardtext="Cryptopunk - Search"/>
+            <HeroCardComponent cardimages="@/assets/twitter.png"  cardtext="Cryptopunk - Search"/>
             <HeroCardComponent class="carditem1" cardimages="../assets/pinterest" cardtext="Popular Design - Search"/>
             <HeroCardComponent class="carditem2" cardimages="../assets/twitter.png" cardtext="Product Design - Search"/>
             <HeroCardComponent class="carditem3" cardimages="../assets/twitter.png" cardtext="Elon Musk - Search"/>
@@ -54,7 +54,7 @@
 <style scoped>
     header{
         background-color: black;
-        padding: 0 3rem 3rem 5rem;
+        padding: 0 3rem 7rem 3rem;
         display: flex;
         flex-direction: column;
         gap: 60px;
