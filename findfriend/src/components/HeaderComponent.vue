@@ -37,6 +37,7 @@
 <style scoped>
     header{
         background-color: black;
+        background-image: url(../assets/Ornament.svg);
         padding: 0 4rem 7rem 4rem;
         display: flex;
         flex-direction: column;
