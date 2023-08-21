@@ -1,9 +1,11 @@
 <script setup>
     defineProps(['buttontext']);
+    defineEmits(['addone'])
 </script>
 
 <template>
     <button class="btn">{{ buttontext }}</button>
+    <!-- <button class="btn" @click="emit('addone')">Increase</button> -->
 </template>
 
 <style>

@@ -6,7 +6,7 @@
 <template>
     <div class="card-item">
         <div class="card-text">
-            <img :src="cardimages" alt="">
+            <img class="sologos" :src="cardimages" alt="thee">
             <p class="cardp">{{ cardtext }}</p>
         </div>
         <p class="cancel"><img src="../assets/cancels.png" alt=""></p>
@@ -15,14 +15,14 @@
 
 <style scoped>
 .card-item{
-    width: 341.226px;
-    height: 82px;
+    width: 290px;
+    /* height: 82px; */
     transform: rotate(-4deg);
     background: rgba(24, 24, 24, 1);
     position: relative;
     display: flex;
     align-items: center;
-    padding: 0 41px;
+    padding: 15px 15px;
     z-index: 5;
     
 }
@@ -35,8 +35,11 @@
     .cardp{
         color: #FFF;
         text-align: center;
-        font-family: Roboto;
-        font-size: 20.445px;
+        font-family: 'Ubuntu';
+        font-size: 18px;
+    }
+    .sologos{
+        height: 27px;
     }
     .cancel{
         position: absolute;

@@ -1,33 +1,17 @@
 <script setup>
     import ButtonComponent from './ButtonComponent.vue';
     import HeroCardComponent from './HeroCardComponent.vue';
-
+    import twitter from '../assets/twitter.png';
+    import pinterest from '../assets/pinterest.png';
+    import facebook from '../assets/facebook.png';
+    import basketball from '../assets/basketball.png';
+    import NavbarComponent from './NavbarComponent.vue';
 
 </script>
 
 <template>
     <header>
-        <div class="navbar">
-          <div class="logodiv">
-            <img src="../assets/logofriend.png" alt="" class="logo">
-            <p class="logotext">Findtrend</p>
-          </div>
-          <div class="links">
-            <a href="" class="link-item">About</a>
-            <a href="" class="link-item">How it works</a>
-            <a href="" class="link-item">Prcing</a>
-            <a href="" class="link-item">Solution</a>
-            <a href="" class="link-item">Features</a>
-          </div>
-          <div class="navbuttons">
-            <a href="">Login</a>
-            <ButtonComponent buttontext="Register"/>
-          </div>
-          <div class="humberger">
-            <div></div>
-            <div></div>
-          </div>
-        </div>
+        <NavbarComponent />
         <div class="header-text">
             <h2 class="heading">Minimize your tabs. <br> Find the trends!</h2>
             
@@ -42,11 +26,10 @@
         </div>
 
         <div class="herocards">
-            <!-- require('../assets/twitter.png') -->
-            <HeroCardComponent cardimages="@/assets/twitter.png"  cardtext="Cryptopunk - Search"/>
-            <HeroCardComponent class="carditem1" cardimages="../assets/pinterest" cardtext="Popular Design - Search"/>
-            <HeroCardComponent class="carditem2" cardimages="../assets/twitter.png" cardtext="Product Design - Search"/>
-            <HeroCardComponent class="carditem3" cardimages="../assets/twitter.png" cardtext="Elon Musk - Search"/>
+            <HeroCardComponent class="carditem0" :cardimages="twitter"  cardtext="Cryptopunk - Search"/>
+            <HeroCardComponent class="carditem1" :cardimages="pinterest" cardtext="Popular Design - Search"/>
+            <HeroCardComponent class="carditem2" :cardimages="facebook" cardtext="Product Design - Search"/>
+            <HeroCardComponent class="carditem3" :cardimages="basketball" cardtext="Elon Musk - Search"/>
         </div>
       </header>
 </template>
@@ -54,25 +37,10 @@
 <style scoped>
     header{
         background-color: black;
-        padding: 0 3rem 7rem 3rem;
+        padding: 0 4rem 7rem 4rem;
         display: flex;
         flex-direction: column;
         gap: 60px;
-    }
-    .navbar{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem;
-    }
-    .navbuttons, .links, .logotext{
-        display: none;
-    }
-    .humberger div{
-        width: 30px;
-        height: 5px;
-        margin-bottom: 5px;
-        background-color: #fff;
     }
     .midbtn{
         background: #A8FF35;
@@ -86,7 +54,7 @@
     .heading{
         color: #FFF;
         text-align: center;
-        font-family: Effra;
+        font-family: 'Ubuntu';
         font-size: 36px;
         font-style: normal;
         font-weight: 900;
@@ -95,7 +63,7 @@
     .paragraph{
         color: #8B8B8B;
         text-align: center;
-        font-family: Effra;
+        font-family: 'Ubuntu';
         font-size: 14px;
         font-weight: 400;
         line-height: 21px;
@@ -113,8 +81,9 @@
     .herocards{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
+        position: relative;
     }
     .carditem1{
         transform: rotate(2deg);
@@ -125,49 +94,15 @@
     .carditem3{
         transform: rotate(4deg);
     }
+    .logodiv{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
 
-    @media (min-width: 732px){
-        .logotext{
-        color: #FFF;
-        text-align: center;
-        font-family: Inter;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 24px;
-        }
-        .navbuttons{
-            display: flex;
-            gap: 0.7rem;
-            align-items: center;
-        }
-        .navbuttons a{
-            color: #FFF;
-            text-align: center;
-            font-family: Effra;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 18px;
-            text-decoration: none;
-        }
-        .links{
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-        .link-item{
-            color: #FFF;
-            text-align: center;
-            font-family: Effra;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 100%; /* 18px */
-            text-decoration: none;
-        }
-        .humberger{
-            display: none;
+    @media (min-width: 769px){
+        header{
+            gap: 100px;
         }
         .heading{
             font-size: 72px;
@@ -183,25 +118,39 @@
             display: block;
         }
         .herocards{
-            flex-direction: row;
+            /* flex-direction: row; */
             position: relative;
-            justify-content: left;
+            /* max-width: 700px; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            padding: 0 10%;
+            /* margin: 0 auto; */
+            background-color: #A8FF35;
+        }
+        .carditem0{
+            position: absolute;
+            left: 5%;
+            bottom: 0;
+            z-index: 5;
         }
         .carditem1{
             position: absolute;
             left: 25%;
-            top: 40%;
+            top: -12px;
+            /* bottom: 10%; */
             z-index: 4;
         }
         .carditem2{
             position: absolute;
-            left: 50%;
-            z-index: 3;
+            right: 25%;
+            bottom: 0px;
+            z-index: 5;
         }
         .carditem3{
             position: absolute;
-            left: 70%;
-            top: 40%;
+            right: 5%;
+            /* bottom: 2%; */
+            top: -12px;
             z-index: 2;
         }
         

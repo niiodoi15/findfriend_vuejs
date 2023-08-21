@@ -1,7 +1,13 @@
 <script setup>
-  import HeaderComponent from './components/HeaderComponent.vue';
-import OpentabComponent from './components/OpentabComponent.vue';
-
+  import DealComponent from './components/DealComponent.vue';
+import HeaderComponent from './components/HeaderComponent.vue';
+import JoinComponent from './components/JoinComponent.vue';
+  import OpentabComponent from './components/OpentabComponent.vue';
+import SociacardComponent from './components/SociacardComponent.vue';
+  import StartupComponent from './components/StartupComponent.vue';
+import FooterComponent from './components/footerComponent.vue';
+  
+  
 </script>
 
 <template>  
@@ -15,15 +21,23 @@ import OpentabComponent from './components/OpentabComponent.vue';
       fulfill your daily browsing needs.</span>
     </h2>
   </div>
+  <StartupComponent />
+  <SociacardComponent />
+  <DealComponent />
+  <JoinComponent />
+  <FooterComponent />
 </template>
 
 <style scoped>
+
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 .textsection{
   padding: 10%;
 }
 .trend{
   color: #000;
-  font-family: Effra;
+  font-family: 'Ubuntu';
   font-size: 36px;
   font-style: normal;
   font-weight: 900;
@@ -31,7 +45,7 @@ import OpentabComponent from './components/OpentabComponent.vue';
 }
 .trend span{
   color: #ADADAD;
-  font-family: Effra;
+  font-family: 'Ubuntu';
   font-size: 36px;
   font-style: normal;
   font-weight: 900;
